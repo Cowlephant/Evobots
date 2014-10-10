@@ -7,6 +7,11 @@ public class ExampleScript : MonoBehaviour {
 
     // This is a comment in vegeta's branch.
 
+    void Update()
+    {
+        // Update loop
+    }
+
     public bool EvolveBot()
     {
         // Robot evolved! Ka-Ching!
