@@ -7,8 +7,11 @@ public class PlayerBot : MonoBehaviour {
     void Start()
     {
         GameObject chassis = GameObject.CreatePrimitive(PrimitiveType.Cube); // Set chassis to a cube
-        chassis.transform.localScale = new Vector3(Random.Range(4, 11), Random.Range(4, 11), Random.Range(4, 11)); // Scale it randomly between 4 and 11 WxHxD
-        chassis.transform.position = new Vector3(0, chassis.transform.localScale.y/2 + 5, 0); // Position it 5 units above the ground
+        chassis.collider.material = (PhysicMaterial)Resources.Load("Materials/Metal"); // Set physics material to Metal
+        chassis.transform.localScale = new Vector3(Random.Range(0.3F, 1F), Random.Range(0.3F, 1F), Random.Range(0.3F, 1F)); // Scale it randomly between 0.3 and 1 WxHxD
+        chassis.transform.position = new Vector3(0, chassis.transform.localScale.y/2 + 0.5F, 0); // Position it 0.5 units above the ground
+        Rigidbody chassisRigidBody = chassis.AddComponent<Rigidbody>(); // Add the rigid body
+        chassisRigidBody.mass = chassis.transform.localScale.x * chassis.transform.localScale.y * chassis.transform.localScale.z; // Set the mass to the volume
 	}
 	
 	// Update is called once per frame
