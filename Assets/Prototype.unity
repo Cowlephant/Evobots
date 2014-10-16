@@ -652,7 +652,7 @@ GameObject:
   - 33: {fileID: 1463340099}
   - 65: {fileID: 1463340098}
   - 23: {fileID: 1463340097}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Ramp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -820,7 +820,7 @@ GameObject:
   - 33: {fileID: 1847397190}
   - 65: {fileID: 1847397189}
   - 23: {fileID: 1847397188}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
